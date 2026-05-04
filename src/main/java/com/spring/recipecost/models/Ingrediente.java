@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 public class Ingrediente {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
@@ -24,9 +24,6 @@ public class Ingrediente {
 
     @Column(name = "quantidade_pacote", precision = 19, scale = 2)
     private BigDecimal quantPacote;
-
-    @Column(name = "quantidade_usado", precision = 19, scale = 2)
-    private BigDecimal quantReceita;
 
 
 }
