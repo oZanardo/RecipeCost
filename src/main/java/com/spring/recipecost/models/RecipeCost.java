@@ -1,4 +1,4 @@
-package com.spring.recipecost.Models;
+package com.spring.recipecost.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
