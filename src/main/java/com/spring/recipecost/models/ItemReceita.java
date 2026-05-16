@@ -4,24 +4,22 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
-@Getter @Setter
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class RecipeCost {
-
+public class ItemReceita {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "Receita")
-    private String nome;
+    @ManyToOne
+    @JoinColumn(name = "id_Ingrediente")
+    private Ingrediente ingrediente;
 
-    @OneToMany
-    List<ItemReceita> ItemReceita = new ArrayList<ItemReceita>();
-
+    @Column(name = "quant_used", precision = 19, scale = 2)
+    private BigDecimal quantidadeUsada;
 
 }
