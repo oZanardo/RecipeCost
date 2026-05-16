@@ -17,7 +17,7 @@ public class RecipeCost {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "Receita")
+    @Column(name = "Receita", nullable = false)
     private String nome;
 
     @OneToMany

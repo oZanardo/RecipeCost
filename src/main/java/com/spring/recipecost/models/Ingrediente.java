@@ -16,7 +16,7 @@ public class Ingrediente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    @Column(name = "Ingrediente", nullable = false)
     private String nome;
 
     @Column(name = "preco_pacote", precision = 19, scale = 2)

@@ -16,8 +16,12 @@ public class ItemReceita {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "id_Ingrediente")
+    @JoinColumn(name = "id_Ingrediente", nullable = false)
     private Ingrediente ingrediente;
+
+    @ManyToOne
+    @JoinColumn(name = "recipe_cost_id", nullable = false)
+    private RecipeCost recipeCost;
 
     @Column(name = "quant_used", precision = 19, scale = 2)
     private BigDecimal quantidadeUsada;
