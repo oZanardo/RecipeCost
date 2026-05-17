@@ -20,8 +20,8 @@ public class ItemReceita {
     private Ingrediente ingrediente;
 
     @ManyToOne
-    @JoinColumn(name = "recipe_cost_id", nullable = false)
-    private RecipeCost recipeCost;
+    @JoinColumn(name = "recipe_id", nullable = false)
+    private Recipe recipe;
 
     @Column(name = "quant_used", precision = 19, scale = 2)
     private BigDecimal quantidadeUsada;

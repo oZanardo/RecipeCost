@@ -24,3 +24,7 @@ Criei 3 entidades para o banco de dados, 1. Ingrediente, 2. ItemReceita e 3. Rec
 ### Escolhas de arquitetura nas entidades
 A escolha do armazenamento dos dados de quantidade e valores foi feita em BigDecimal, ciente dele ser consideravelmente mais pesado do que um double ou um int, mas a escolha dele para valores monetários é justa pela questão que ele é o valor mais exato que temos e quanto o assunto é dinheiro devemos focar na precisão, agora na questão de quantidades
 reconheço que não tem essa necessidade, mas fiz essa escolha para não ter problemas principalmente na hora de fazer contas com o valor e também para o usuário poder digitar e ter informações sobre os numeros decimais, a escoha do double tbm foi considerada mas acumularia erros a cada utilização entre ele e o valor financeiro, mas ainda estou pensando em utiliza-lo, vou analizar melhor nos próximos dias
+
+## 17 de Maio de 2026
+Foi feita a criação dos repositórios e comecei a estudar de como o repositório funciona por baixo dos panos, vou estudar ao decorrer do dia e depois explico aqui o que eu entender, mas pra começo de conversa os repositórios são interfaces e não classes.
+
